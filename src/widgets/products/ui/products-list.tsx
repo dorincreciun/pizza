@@ -9,6 +9,8 @@ import { APP_ROUTES } from "@shared/config";
 import { cn } from "@shared/utils";
 import { Pagination } from "@widgets/pagination";
 
+import { ProductsEmpty } from "./products-empty";
+
 interface ProductsListProps {
     categoryId?: string;
     page?: number;
@@ -33,6 +35,10 @@ export const ProductsList = async ({
         crusts,
         ingredients,
     });
+
+    if (products.length === 0) {
+        return <ProductsEmpty />;
+    }
 
     return (
         <div className="flex min-w-0 flex-1 flex-col">

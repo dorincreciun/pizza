@@ -72,6 +72,8 @@ export const useStoreCart = create<CartStoreProps>()(
                         (item) => getCartLineKey(item) !== lineKey,
                     ),
                 })),
+
+            clearItems: () => set({ items: [] }),
         }),
         {
             name: "cart-storage",

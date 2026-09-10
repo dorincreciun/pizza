@@ -8,6 +8,14 @@
         "PizzaCrust": {
             "TRADITIONAL": "Традиционное",
             "THIN": "Тонкое"
+        },
+        "OrderStatus": {
+            "PENDING": "Ожидает",
+            "CONFIRMED": "Подтверждён",
+            "PREPARING": "Готовится",
+            "OUT_FOR_DELIVERY": "В доставке",
+            "DELIVERED": "Доставлен",
+            "CANCELLED": "Отменён"
         }
     }
 }

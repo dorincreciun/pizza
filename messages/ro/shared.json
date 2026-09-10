@@ -8,6 +8,14 @@
         "PizzaCrust": {
             "TRADITIONAL": "Tradițional",
             "THIN": "Subțire"
+        },
+        "OrderStatus": {
+            "PENDING": "În așteptare",
+            "CONFIRMED": "Confirmată",
+            "PREPARING": "Se prepară",
+            "OUT_FOR_DELIVERY": "În livrare",
+            "DELIVERED": "Livrată",
+            "CANCELLED": "Anulată"
         }
     }
 }

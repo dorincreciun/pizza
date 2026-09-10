@@ -22,4 +22,5 @@ export interface CartStoreProps {
     addItem: (item: AddCartItemInput) => void;
     updateQuantity: (lineKey: string, quantity: number) => void;
     removeItem: (lineKey: string) => void;
+    clearItems: () => void;
 }

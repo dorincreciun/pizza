@@ -280,18 +280,49 @@ function sauceNamesFromPath(imagePath: string): LocaleStrings {
     const base = imagePath
         .split("/")
         .pop()!
-        .replace(/\.[^.]+$/, "");
-    const label = base
-        .replace(/^sos-?/i, "")
-        .split(/[-_]/)
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
+        .replace(/\.[^.]+$/, "")
+        .toLowerCase();
 
-    return {
-        RO: `Sos ${label}`,
-        EN: `${label} sauce`,
-        RU: `Соус ${label}`,
+    const namedSauces: Record<string, LocaleStrings> = {
+        "sos-1": {
+            EN: "Garlic sauce",
+            RO: "Sos de usturoi",
+            RU: "Чесночный соус",
+        },
+        "sos-2": {
+            EN: "BBQ sauce",
+            RO: "Sos BBQ",
+            RU: "Соус барбекю",
+        },
+        "sos-3": {
+            EN: "Tomato sauce",
+            RO: "Sos de roșii",
+            RU: "Томатный соус",
+        },
+        "sos-4": {
+            EN: "Cheese sauce",
+            RO: "Sos de brânză",
+            RU: "Сырный соус",
+        },
+        "sos-5": {
+            EN: "Spicy sauce",
+            RO: "Sos picant",
+            RU: "Острый соус",
+        },
+        "sos-6": {
+            EN: "Herb sauce",
+            RO: "Sos de ierburi",
+            RU: "Травяной соус",
+        },
     };
+
+    return (
+        namedSauces[base] ?? {
+            RO: "Sos",
+            EN: "Sauce",
+            RU: "Соус",
+        }
+    );
 }
 
 function buildProductName(

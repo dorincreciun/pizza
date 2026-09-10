@@ -9,7 +9,11 @@ import { CartContent } from "./cart-content";
 import { CartHeader } from "./cart-header";
 import { CartSummary } from "./cart-summary";
 
-export const Cart = () => {
+interface CartProps {
+    isAuthenticated: boolean;
+}
+
+export const Cart = ({ isAuthenticated }: CartProps) => {
     const t = useTranslations("widgets.cart");
     const open = useStoreCart((state) => state.open);
     const setOpen = useStoreCart((state) => state.setOpen);
@@ -27,7 +31,7 @@ export const Cart = () => {
                 </Sidebar.Body>
                 {!isEmpty && (
                     <Sidebar.Footer>
-                        <CartSummary />
+                        <CartSummary isAuthenticated={isAuthenticated} />
                     </Sidebar.Footer>
                 )}
             </Sidebar>

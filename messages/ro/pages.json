@@ -3,6 +3,13 @@
         "title": "Toate pizza-urile"
     },
     "OrdersPage": {
-        "title": "Comenzile mele"
+        "title": "Comenzile mele",
+        "placedAt": "Plasată {date}",
+        "addressLabel": "Adresă",
+        "empty": {
+            "title": "Nu ai comenzi încă",
+            "description": "Adaugă pizza în coș și plasează o comandă ca să le vezi aici.",
+            "back": "Vezi meniul"
+        }
     }
 }

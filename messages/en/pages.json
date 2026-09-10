@@ -3,6 +3,13 @@
         "title": "All pizzas"
     },
     "OrdersPage": {
-        "title": "My orders"
+        "title": "My orders",
+        "placedAt": "Placed {date}",
+        "addressLabel": "Address",
+        "empty": {
+            "title": "No orders yet",
+            "description": "Add pizzas to your cart and place an order to see them here.",
+            "back": "Browse the menu"
+        }
     }
 }

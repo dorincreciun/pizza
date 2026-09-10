@@ -39,6 +39,19 @@
             "unknown": "A apărut o eroare. Încearcă din nou."
         }
     },
+    "checkout": {
+        "addressLabel": "Adresă de livrare",
+        "addressPlaceholder": "Stradă, bloc, apartament",
+        "submit": "Plasează comanda",
+        "signInToOrder": "Autentifică-te ca să plasezi comanda",
+        "errors": {
+            "unauthenticated": "Autentifică-te ca să plasezi o comandă.",
+            "emptyCart": "Coșul este gol.",
+            "invalidAddress": "Introdu o adresă de livrare (minim 8 caractere).",
+            "variantNotFound": "Un produs din coș nu mai este disponibil.",
+            "unknown": "A apărut o eroare. Încearcă din nou."
+        }
+    },
     "productsFilter": {
         "title": "Filtrare",
         "openMobile": "Filtre",

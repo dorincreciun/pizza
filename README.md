@@ -109,7 +109,10 @@ src/
 - [x] **i18n:** English, Romanian, Russian (`messages/{locale}/*.json`)
 - [x] Language switcher preserves query params (filters, page)
 - [x] Sticky header with scroll shrink
-- [x] Sign-in modal shell (intercepting route, UI only)
+- [x] Sign-in / sign-up (password, JWT session cookie; demo user in seed)
+- [x] **Cart** (Zustand, persisted) + **checkout** creates `Order` in Prisma
+- [x] **My orders** (`/orders` / `/comenzi` / `/zakazy`) — auth-gated list
+- [x] **Builder** intercepting modal + hard route `/builder/[id]`
 
 ### Data layer
 
@@ -129,16 +132,11 @@ src/
 
 Planned next steps (not implemented yet):
 
-- [ ] **Cart & checkout** — basket state, order creation using existing `Order` model
-- [ ] **Auth flow** — OTP email sign-in (schema has `User.otpCode`), verify modal
-- [ ] **Product detail** — live price from selected variant (size + crust)
-- [ ] **Add to cart** on listing & detail
-- [ ] **Filter “Apply” refinements** — loading states, empty states
-- [ ] **My orders** page (`/orders` / `/comenzi` / `/zakazy`)
-- [ ] **Builder modal** — pizza customizer (route stub exists)
+- [ ] **Payments** — no Stripe/card flow; checkout stores the order as `PENDING`
+- [ ] **Auth OTP email** — current flow is email + password
 - [ ] **Tests** — unit tests for mappers/filters, e2e for catalog flow
 - [x] **Deploy** — [Vercel](https://pizza-gamma-eight.vercel.app/en) + managed PostgreSQL
-- [ ] **CI** — lint + build on push
+- [x] **CI** — lint + typecheck on push (GitHub Actions)
 - [ ] **`useUpdateSearchParams`** — respect current pathname (not only home) when updating query
 
 ---

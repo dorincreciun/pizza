@@ -37,7 +37,7 @@ export const IngredientItem = ({
                     width={110}
                     height={110}
                     className={cn(
-                        "h-20 w-20 rounded-xl object-cover transition-transform duration-300 ease-in-out sm:h-[110px] sm:w-[110px]",
+                        "h-auto w-auto max-h-20 max-w-20 rounded-xl object-cover transition-transform duration-300 ease-in-out sm:max-h-[110px] sm:max-w-[110px]",
                         isActive ? "scale-105" : "group-hover:scale-105",
                     )}
                 />

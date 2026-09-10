@@ -39,6 +39,19 @@
             "unknown": "Something went wrong. Please try again."
         }
     },
+    "checkout": {
+        "addressLabel": "Delivery address",
+        "addressPlaceholder": "Street, building, apartment",
+        "submit": "Place order",
+        "signInToOrder": "Sign in to place an order",
+        "errors": {
+            "unauthenticated": "Sign in to place an order.",
+            "emptyCart": "Your cart is empty.",
+            "invalidAddress": "Enter a delivery address (at least 8 characters).",
+            "variantNotFound": "A product in your cart is no longer available.",
+            "unknown": "Something went wrong. Please try again."
+        }
+    },
     "productsFilter": {
         "title": "Filters",
         "openMobile": "Filters",

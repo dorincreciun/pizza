@@ -52,7 +52,7 @@ export default async function RootLayout({children, modals, params}: RootLayoutP
                         {children}
 
                         {/* Sidebars */}
-                        <Cart />
+                        <Cart isAuthenticated={Boolean(user)} />
                     </AppLayout>
                     {modals}
 

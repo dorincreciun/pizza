@@ -1,13 +1,16 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { MoveRight } from "lucide-react";
 
 import { selectCartTotalInCents, useStoreCart } from "@entities/cart";
-import { Button } from "@shared/ui";
+import { PlaceOrderForm } from "@features/checkout";
 import { formatPrice } from "@shared/utils";
 
-export const CartSummary = () => {
+interface CartSummaryProps {
+    isAuthenticated: boolean;
+}
+
+export const CartSummary = ({ isAuthenticated }: CartSummaryProps) => {
     const t = useTranslations("widgets.cart.summary");
     const totalInCents = useStoreCart(selectCartTotalInCents);
 
@@ -19,9 +22,7 @@ export const CartSummary = () => {
                     {formatPrice(totalInCents)}
                 </span>
             </div>
-            <Button type="button" className="w-full" size="md">
-                {t("checkout")} <MoveRight aria-hidden />
-            </Button>
+            <PlaceOrderForm isAuthenticated={isAuthenticated} />
         </div>
     );
 };

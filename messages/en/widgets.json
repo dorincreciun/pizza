@@ -22,7 +22,12 @@
         "addToCart": "Add to cart",
         "viewProduct": "View {name}",
         "viewInPage": "View in page",
-        "fastOrder": "Fast order"
+        "fastOrder": "Fast order",
+        "empty": {
+            "title": "No pizzas match these filters",
+            "description": "Try another size, crust, or ingredient — or reset filters to see the full menu.",
+            "reset": "Reset filters"
+        }
     },
     "cart": {
         "title": "In cart",

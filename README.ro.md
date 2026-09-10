@@ -109,7 +109,10 @@ src/
 - [x] **i18n:** engleză, română, rusă (`messages/{locale}/*.json`)
 - [x] Schimbarea limbii păstrează query params (filtre, pagină)
 - [x] Header sticky cu efect la scroll
-- [x] Shell modal autentificare (doar UI)
+- [x] Autentificare (email + parolă, sesiune JWT; user demo în seed)
+- [x] **Coș** (Zustand) + **checkout** care creează `Order` în Prisma
+- [x] **Comenzile mele** (`/orders` / `/comenzi` / `/zakazy`) — listă după login
+- [x] **Builder** modal interceptat + rută hard `/builder/[id]`
 
 ### Strat de date
 
@@ -129,15 +132,11 @@ src/
 
 Pași planificați (încă neimplementați):
 
-- [ ] **Coș și checkout** — stare coș, creare comandă (modelul `Order` există în schema)
-- [ ] **Autentificare** — OTP pe email (`User.otpCode`), modal verify
-- [ ] **Detaliu produs** — preț dinamic la schimbarea mărimii/aluatului
-- [ ] **Adaugă în coș** pe listă și detaliu
-- [ ] Stări de încărcare / listă goală pentru filtre
-- [ ] Pagina **Comenzile mele**
-- [ ] Modal **builder** pizza (stub de rută existent)
+- [ ] **Plăți** — fără Stripe; checkout salvează comanda ca `PENDING`
+- [ ] **OTP pe email** — fluxul curent e email + parolă
 - [ ] **Teste** — unitare (mappers/filtre), e2e (flux catalog)
-- [ ] **Deploy** — Vercel + Postgres gestionat, CI
+- [x] **Deploy** — Vercel + Postgres gestionat
+- [x] **CI** — lint + typecheck pe push (GitHub Actions)
 - [ ] **`useUpdateSearchParams`** — păstrare pathname curent (nu doar home)
 
 ---

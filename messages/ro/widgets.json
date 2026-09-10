@@ -22,7 +22,12 @@
         "addToCart": "Adaugă",
         "viewProduct": "Vezi {name}",
         "viewInPage": "Vezi în pagină",
-        "fastOrder": "Comandă rapidă"
+        "fastOrder": "Comandă rapidă",
+        "empty": {
+            "title": "Nicio pizza nu se potrivește filtrelor",
+            "description": "Încearcă altă mărime, aluat sau ingredient — sau resetează filtrele pentru tot meniul.",
+            "reset": "Resetează filtrele"
+        }
     },
     "cart": {
         "title": "În coș",
