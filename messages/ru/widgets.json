@@ -1,0 +1,41 @@
+{
+    "categories": {
+        "all": "Все",
+        "more": "Ещё"
+    },
+    "pagination": {
+        "prev": "Предыдущая страница",
+        "next": "Следующая страница",
+        "page": "Страница {page}",
+        "of": "из"
+    },
+    "header": {
+        "tagline": "вкусней уже некуда"
+    },
+    "productDetail": {
+        "chooseSize": "Выберите размер",
+        "chooseCrust": "Выберите тесто",
+        "addExtras": "Добавить по вкусу",
+        "addToCartFor": "Добавить в корзину за {price}"
+    },
+    "products": {
+        "addToCart": "Добавить",
+        "viewProduct": "Смотреть {name}",
+        "viewInPage": "Открыть страницу",
+        "fastOrder": "Быстрый заказ"
+    },
+    "cart": {
+        "title": "В корзине",
+        "itemsCount": "{count, plural, one {# товар} few {# товара} many {# товаров} other {# товара}}",
+        "closeSidebar": "Закрыть корзину",
+        "empty": {
+            "title": "Корзина пустая",
+            "description": "Добавьте хотя бы одну пиццу, чтобы совершить заказ",
+            "back": "Назад"
+        },
+        "summary": {
+            "total": "Итого:",
+            "checkout": "Оформить заказ"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "selectLanguage": {
+        "label": "Сменить язык",
+        "localeNames": {
+            "en": "English",
+            "ro": "Română",
+            "ru": "Русский"
+        }
+    },
+    "signIn": {
+        "buttonAriaLabel": "Войти в аккаунт",
+        "buttonText": "Войти",
+        "userMenuAriaLabel": "Открыть меню аккаунта",
+        "userMenuLabel": "Аккаунт",
+        "ordersLink": "Мои заказы",
+        "signOut": "Выйти",
+        "modal": {
+            "title": "Вход",
+            "close": "Закрыть",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Введите email",
+            "passwordLabel": "Пароль",
+            "passwordPlaceholder": "Введите пароль",
+            "confirmPasswordLabel": "Подтвердите пароль",
+            "confirmPasswordPlaceholder": "Повторите пароль",
+            "submitSignIn": "Войти",
+            "submitSignUp": "Создать аккаунт",
+            "noAccount": "Нет аккаунта?",
+            "hasAccount": "Уже есть аккаунт?",
+            "switchToSignUp": "Регистрация",
+            "switchToSignIn": "Войти"
+        },
+        "errors": {
+            "invalidEmail": "Введите корректный email.",
+            "invalidCredentials": "Неверный email или пароль.",
+            "weakPassword": "Пароль должен содержать минимум 8 символов.",
+            "passwordMismatch": "Пароли не совпадают.",
+            "emailTaken": "Аккаунт с таким email уже существует.",
+            "unknown": "Что-то пошло не так. Попробуйте снова."
+        }
+    },
+    "productsFilter": {
+        "title": "Фильтрация",
+        "openMobile": "Фильтры",
+        "closeSidebar": "Закрыть фильтры",
+        "apply": "Применить",
+        "reset": "Сбросить",
+        "groups": {
+            "crusts": "Тесто",
+            "sizes": "Размер",
+            "ingredients": "Ингредиенты"
+        }
+    }
+}

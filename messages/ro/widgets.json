@@ -1,0 +1,41 @@
+{
+    "categories": {
+        "all": "Toate",
+        "more": "Mai mult"
+    },
+    "pagination": {
+        "prev": "Pagina anterioară",
+        "next": "Pagina următoare",
+        "page": "Pagina {page}",
+        "of": "din"
+    },
+    "header": {
+        "tagline": "mai gustos de atât nu se poate"
+    },
+    "productDetail": {
+        "chooseSize": "Alege mărimea",
+        "chooseCrust": "Alege aluatul",
+        "addExtras": "Adaugă în plus",
+        "addToCartFor": "Adaugă în coș pentru {price}"
+    },
+    "products": {
+        "addToCart": "Adaugă",
+        "viewProduct": "Vezi {name}",
+        "viewInPage": "Vezi în pagină",
+        "fastOrder": "Comandă rapidă"
+    },
+    "cart": {
+        "title": "În coș",
+        "itemsCount": "{count, plural, one {# produs} few {# produse} other {# de produse}}",
+        "closeSidebar": "Închide coșul",
+        "empty": {
+            "title": "Coșul este gol",
+            "description": "Adaugă cel puțin o pizza pentru a plasa o comandă",
+            "back": "Înapoi"
+        },
+        "summary": {
+            "total": "Total:",
+            "checkout": "Plasează comanda"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "enums": {
+        "PizzaSize": {
+            "SMALL": "Mic",
+            "MEDIUM": "Mediu",
+            "LARGE": "Mare"
+        },
+        "PizzaCrust": {
+            "TRADITIONAL": "Tradițional",
+            "THIN": "Subțire"
+        }
+    }
+}

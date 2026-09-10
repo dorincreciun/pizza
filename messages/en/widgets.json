@@ -1,0 +1,41 @@
+{
+    "categories": {
+        "all": "All",
+        "more": "More"
+    },
+    "pagination": {
+        "prev": "Previous page",
+        "next": "Next page",
+        "page": "Page {page}",
+        "of": "of"
+    },
+    "header": {
+        "tagline": "as tasty as it gets"
+    },
+    "productDetail": {
+        "chooseSize": "Choose size",
+        "chooseCrust": "Choose crust",
+        "addExtras": "Add extras",
+        "addToCartFor": "Add to cart for {price}"
+    },
+    "products": {
+        "addToCart": "Add to cart",
+        "viewProduct": "View {name}",
+        "viewInPage": "View in page",
+        "fastOrder": "Fast order"
+    },
+    "cart": {
+        "title": "In cart",
+        "itemsCount": "{count, plural, one {# item} other {# items}}",
+        "closeSidebar": "Close cart",
+        "empty": {
+            "title": "Cart is empty",
+            "description": "Add at least one pizza to place an order",
+            "back": "Back"
+        },
+        "summary": {
+            "total": "Total:",
+            "checkout": "Place order"
+        }
+    }
+}

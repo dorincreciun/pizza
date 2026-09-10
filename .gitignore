@@ -1,0 +1,89 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Environment & secrets (păstrează doar șablonul)
+.env
+.env.*
+!.env.example
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+
+# Build & cache
+/build
+/dist
+*.tsbuildinfo
+.turbo
+.swc/
+
+# Testing
+/coverage
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Prisma (clientul generat e în node_modules)
+/src/generated/
+
+# Logs & debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDEs & editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Cursor
+.cursor/
+
+# Vercel / deploy local
+.vercel
+
+# Docker (volume-uri locale, nu compose-ul)
+docker-compose.override.yml
+
+# Certificates & keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Misc
+*.local
+.cache/
+.temp/
+tmp/
+temp/

@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+    :where(
+    a[href],
+    button,
+    textarea,
+    select,
+    summary,
+    [role="button"],
+    [role="tab"],
+    [role="menuitem"],
+    [tabindex]:not([tabindex="-1"])
+  ):focus-visible {
+        @apply
+        outline-none
+        focus-visible:ring-2
+        focus-visible:ring-[#FE5F00]/40
+        focus-visible:ring-offset-2;
+    }
+}

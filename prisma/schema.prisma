@@ -1,0 +1,217 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── ENUMS ───────────────────────────────────────────────────
+
+enum UserLanguage {
+  EN
+  RO
+  RU
+}
+
+enum PizzaSize {
+  SMALL
+  MEDIUM
+  LARGE
+}
+
+enum PizzaCrust {
+  TRADITIONAL
+  THIN
+}
+
+enum VariantType {
+  STANDARD // produse non-pizza (băuturi, deserturi)
+  PIZZA // require size + crust
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PREPARING
+  OUT_FOR_DELIVERY
+  DELIVERED
+  CANCELLED
+}
+
+// ─── USER ────────────────────────────────────────────────────
+
+model User {
+  id           String       @id @default(uuid())
+  email        String       @unique
+  passwordHash String
+  language     UserLanguage @default(EN)
+  cart         Cart?
+  orders       Order[]
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+}
+
+// ─── CART ────────────────────────────────────────────────────
+
+model Cart {
+  id        String     @id @default(uuid())
+  userId    String     @unique
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items     CartItem[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model CartItem {
+  id        String @id @default(uuid())
+  quantity  Int    @default(1)
+
+  cartId    String
+  cart      Cart           @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  variantId String
+  variant   ProductVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
+
+  extras CartItemExtraIngredient[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CartItemExtraIngredient {
+  id           String @id @default(uuid())
+  cartItemId   String
+  cartItem     CartItem   @relation(fields: [cartItemId], references: [id], onDelete: Cascade)
+  ingredientId String
+  ingredient   Ingredient @relation(fields: [ingredientId], references: [id], onDelete: Cascade)
+
+  @@unique([cartItemId, ingredientId])
+}
+
+// ─── CATEGORY ────────────────────────────────────────────────
+
+model Category {
+  id           String                @id @default(uuid())
+  products     Product[]
+  translations CategoryTranslation[]
+  createdAt    DateTime              @default(now())
+  updatedAt    DateTime              @updatedAt
+}
+
+model CategoryTranslation {
+  id         String       @id @default(uuid())
+  locale     UserLanguage
+  name       String
+  categoryId String
+  category   Category     @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@unique([categoryId, locale])
+}
+
+// ─── PRODUCT ─────────────────────────────────────────────────
+
+model Product {
+  id          String  @id @default(uuid())
+  imageUrl    String?
+  basePrice   Int // prețul variantei implicite (în bani, ex: 8900 = 89.00 lei)
+  isAvailable Boolean @default(true)
+
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  variants     ProductVariant[]
+  ingredients  Ingredient[]         @relation("ProductIngredients")
+  translations ProductTranslation[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ProductTranslation {
+  id               String       @id @default(uuid())
+  locale           UserLanguage
+  name             String
+  description      String
+  shortDescription String
+
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, locale])
+}
+
+// ─── PRODUCT VARIANT ─────────────────────────────────────────
+
+model ProductVariant {
+  id          String      @id @default(uuid())
+  price       Int
+  variantType VariantType @default(STANDARD)
+
+  // Doar pentru PIZZAsi e ok ca aceste varinate se le mapez 
+  size  PizzaSize?
+  crust PizzaCrust?
+
+  productId  String
+  product    Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  orderItems OrderItem[]
+  cartItems  CartItem[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([productId, size, crust])
+}
+
+// ─── INGREDIENT ──────────────────────────────────────────────
+
+model Ingredient {
+  id         String  @id @default(uuid())
+  extraPrice Int // 0 = inclus în preț
+  imageUrl   String?
+  isOptional Boolean @default(true) // poate fi adăugat/scos de user
+
+  products     Product[]               @relation("ProductIngredients")
+  translations IngredientTranslation[]
+  cartExtras   CartItemExtraIngredient[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model IngredientTranslation {
+  id     String       @id @default(uuid())
+  locale UserLanguage
+  name   String
+
+  ingredientId String
+  ingredient   Ingredient @relation(fields: [ingredientId], references: [id], onDelete: Cascade)
+
+  @@unique([ingredientId, locale])
+}
+
+// ─── ORDER ───────────────────────────────────────────────────
+
+model Order {
+  id      String      @id @default(uuid())
+  status  OrderStatus @default(PENDING)
+  total   Int // suma totală în bani
+  address String // adresa de livrare
+
+  userId String
+  user   User        @relation(fields: [userId], references: [id])
+  items  OrderItem[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model OrderItem {
+  id            String @id @default(uuid())
+  quantity      Int
+  priceSnapshot Int // prețul la momentul comenzii (nu se schimbă dacă schimbi produsul)
+
+  orderId   String
+  order     Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  variantId String
+  variant   ProductVariant @relation(fields: [variantId], references: [id])
+}

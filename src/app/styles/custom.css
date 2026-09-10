@@ -1,0 +1,18 @@
+html {
+    @apply min-h-full
+    max-w-full
+    antialiased;
+}
+
+body {
+    @apply font-sans
+    min-h-full
+    flex
+    flex-col;
+}
+/*
+
+* {
+    border: 1px solid red;
+}
+*/

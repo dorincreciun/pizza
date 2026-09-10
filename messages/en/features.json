@@ -1,0 +1,54 @@
+{
+    "selectLanguage": {
+        "label": "Change language",
+        "localeNames": {
+            "en": "English",
+            "ro": "Română",
+            "ru": "Русский"
+        }
+    },
+    "signIn": {
+        "buttonAriaLabel": "Sign in to your account",
+        "buttonText": "Sign in",
+        "userMenuAriaLabel": "Open account menu",
+        "userMenuLabel": "Account",
+        "ordersLink": "My orders",
+        "signOut": "Sign out",
+        "modal": {
+            "title": "Sign in",
+            "close": "Close",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Enter your email",
+            "passwordLabel": "Password",
+            "passwordPlaceholder": "Enter your password",
+            "confirmPasswordLabel": "Confirm password",
+            "confirmPasswordPlaceholder": "Repeat your password",
+            "submitSignIn": "Sign in",
+            "submitSignUp": "Create account",
+            "noAccount": "Don't have an account?",
+            "hasAccount": "Already have an account?",
+            "switchToSignUp": "Sign up",
+            "switchToSignIn": "Sign in"
+        },
+        "errors": {
+            "invalidEmail": "Enter a valid email address.",
+            "invalidCredentials": "Incorrect email or password.",
+            "weakPassword": "Password must be at least 8 characters.",
+            "passwordMismatch": "Passwords do not match.",
+            "emailTaken": "An account with this email already exists.",
+            "unknown": "Something went wrong. Please try again."
+        }
+    },
+    "productsFilter": {
+        "title": "Filters",
+        "openMobile": "Filters",
+        "closeSidebar": "Close filters",
+        "apply": "Apply",
+        "reset": "Reset",
+        "groups": {
+            "crusts": "Crust",
+            "sizes": "Size",
+            "ingredients": "Ingredients"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "selectLanguage": {
+        "label": "Schimbă limba",
+        "localeNames": {
+            "en": "English",
+            "ro": "Română",
+            "ru": "Русский"
+        }
+    },
+    "signIn": {
+        "buttonAriaLabel": "Conectează-te la cont",
+        "buttonText": "Autentificare",
+        "userMenuAriaLabel": "Deschide meniul contului",
+        "userMenuLabel": "Cont",
+        "ordersLink": "Comenzile mele",
+        "signOut": "Deconectare",
+        "modal": {
+            "title": "Autentificare",
+            "close": "Închide",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Introdu emailul",
+            "passwordLabel": "Parolă",
+            "passwordPlaceholder": "Introdu parola",
+            "confirmPasswordLabel": "Confirmă parola",
+            "confirmPasswordPlaceholder": "Repetă parola",
+            "submitSignIn": "Autentificare",
+            "submitSignUp": "Creează cont",
+            "noAccount": "Nu ai cont?",
+            "hasAccount": "Ai deja cont?",
+            "switchToSignUp": "Înregistrare",
+            "switchToSignIn": "Autentificare"
+        },
+        "errors": {
+            "invalidEmail": "Introdu o adresă de email validă.",
+            "invalidCredentials": "Email sau parolă incorectă.",
+            "weakPassword": "Parola trebuie să aibă cel puțin 8 caractere.",
+            "passwordMismatch": "Parolele nu coincid.",
+            "emailTaken": "Există deja un cont cu acest email.",
+            "unknown": "A apărut o eroare. Încearcă din nou."
+        }
+    },
+    "productsFilter": {
+        "title": "Filtrare",
+        "openMobile": "Filtre",
+        "closeSidebar": "Închide filtrele",
+        "apply": "Aplică",
+        "reset": "Resetează",
+        "groups": {
+            "crusts": "Aluat",
+            "sizes": "Mărime",
+            "ingredients": "Ingrediente"
+        }
+    }
+}
